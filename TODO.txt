@@ -1,0 +1,3 @@
+src/routes/projects.js:5 - projects from DB
+src/routes/projects.js:11 - image for project
+public/javascripts/projects/artificial_life/artificial_life.js:17 - generate world by params

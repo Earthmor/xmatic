@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+    div(class="stupid_bob__title")
+        h2 Stupid Bob
+    div(class="stupid_bob__content")
+        table
+            tr
+                th Action
+                th Description
+                th Example
+            tr
+                td do
+                td Do something. Indicate operations in quotes separated by comma. Each operation will invoked one by one.
+                td do(define(sum, 0), define(sum, do(+(4,20))), print(sum))
+            tr
+                td define
+                td Define a variable. First argument is name of variable, second argument is value. Looks like a = 1.
+                td do(define(a, 1), print(a))
+            tr
+                td if
+                td Logical operation where first argument is condition, second argument is result when condition is TRUE and third argument when condition is FALSE. Looks like (a>b) ? a++ : b++.
+                td do(define(a, 1), define(b, 5), if(> (a, 1), print(a), print(b)))
+            tr
+                td while
+                td Do something while condition is TRUE. First argument is condition, second argument is do-action.
+                td do(define(total, 0), define(count, 1), while(<(count, 11), do(define(total, +(total, count)), define(count, +(count, 1)))), print(total))
+            tr
+                td fun
+                td Declare function with arguments where all arguments except for the last, is arguments of new function. Last argument is body of function.
+                td do(define(pow, fun(base, exp, if(==(exp, 0), 1, *(base, pow(base, -(exp, 1)))))), print(pow(2, 10)))
+        div(class="stupid_bob__demo")
+            div(class="stupid_bob__editor")
+                textarea(class="stupid_bob_receiver" id="stupid_bob_receiver")
+            div(class="stupid_bob__button" id="stupid_bob_button") Do it Bob!
+    script(type="module" src="/javascript/projects/stupid_bob/stupid_bob.js")

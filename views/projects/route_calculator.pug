@@ -1,0 +1,71 @@
+extends ../layout
+
+block content
+    div(class="route_calculator__title")
+        h2 Range Calculator
+    div(class="route_calculator__content")
+        form(id="orderForm")
+            fieldset
+                div()
+                    label(for="srcAddress") Откуда:
+                    div()
+                        span()
+                            span()
+                        input(id="srcAddress" type="text")
+                        span()
+                            button(type="button" id="srcButton") Отметить
+                div()
+                    label(for="dstAddress") Куда:
+                    div()
+                        span()
+                            span()
+                        input(id="dstAddress" type="text")
+                        span()
+                            button(type="button" id="dstButton") Отметить
+                div()
+                    label(for="vehicleWeight") Масса а/м:
+                    div()
+                        select(id="vehicleWeight")
+                            option(value="0") До 3000 кг
+                            option(value="1") Более 3000 кг
+                        div()
+                            label()
+                                input(type="checkbox" id="nightRate")
+                                |Ночной тариф
+                div()
+                    button(type="button" id="calcButton") Расчитать
+                div()
+                    hr()
+        div(id="map" style="width: 100%; height: 500px;")
+        div(id="calcResults" style="display: none")
+            table()
+                tr
+                    th
+                    th
+                tr()
+                    td Подача
+                    td(id="givingFee")
+                tr()
+                    td Подача за город
+                    td(id="regionGivingFee")
+                tr()
+                    td Транспортировка за городом свыше 20 км
+                    td(id="kmFee")
+                tr()
+                    td Ночной тариф
+                    td(id="nightlyFee")
+                tr()
+                    td Расстояние
+                    td(id="distance")
+                tr()
+                    td Расстояние от города
+                    td(id="distance-from-city")
+                tr()
+                    td Время
+                    td(id="time")
+                tr()
+                    td Итого:
+                    td(id="total")
+
+    script(src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="application/javascript")
+    script(src='/javascript/projects/route_calculator/demo.js' type="module")

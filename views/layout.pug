@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous")
+        link(rel='stylesheet', type='text/css', href='/stylesheets/style.scss')
+    body(class="max-width mx-auto px3")
+        div(class="content my4")
+            header(id="header")
+                a(href="/")
+                    div(id="logo" style="background-image: url(/images/logo.png);")
+                    div(id="title")
+                        h1 Xmatic
+                div(id="nav")
+                    ul
+                        li(class="icon")
+                            a(href="#")
+                                i(class="fas fa-bars fa-2x")
+                        li
+                            a(href="/") Home
+                        li
+                            a(href="/about") About
+                        li
+                            a(href="/projects") Projects
+            block content
+        footer(id="footer")
+            div(class="footer-left") Copyright © 2018 Artem Budnikov
+            div(class="footer-right")
+                nav
+                    ul
+                        li
+                            a(href="/") Home
+                        li
+                            a(href="/about") About
+                        li
+                            a(href="/projects") Projects
+    script(src='/javascript/script.js')

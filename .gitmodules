@@ -1,0 +1,9 @@
+[submodule "public/javascript/projects/artificial_life"]
+	path = public/javascript/projects/artificial_life
+	url = git@github.com:Earthmor/artificial_life.git
+[submodule "public/javascript/projects/stupid_bob"]
+	path = public/javascript/projects/stupid_bob
+	url = git@github.com:Earthmor/stupid_bob.git
+[submodule "public/javascript/projects/route_calculator"]
+	path = public/javascript/projects/route_calculator
+	url = git@github.com:Earthmor/route_calculator.git

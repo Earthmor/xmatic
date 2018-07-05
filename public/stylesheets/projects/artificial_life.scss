@@ -1,0 +1,28 @@
+.artificial_life__title {
+  padding: 5px;
+}
+
+.artificial_life__content {
+  padding: 5px;
+  display: flex;
+  flex-flow: column;
+}
+
+.artificial_life__demo {
+  text-align: center;
+}
+
+.artificial_life__box {
+  position: relative;
+}
+
+.artificial_life__button {
+  margin-top: 5px;
+  color: white;
+  background: #2f79e9;
+  cursor: pointer;
+  border-radius: 18px;
+  font-size: 100%;
+  width: 10.5em;
+  display: inline-block;
+}

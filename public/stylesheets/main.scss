@@ -1,0 +1,95 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1d1f21;
+  color: #c9cacc;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Menlo", "Meslo LG", monospace;
+  line-height: 1.725;
+  text-rendering: geometricPrecision;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content {
+  flex: 1;
+}
+
+.content a {
+  color: #c9cacc;
+  text-decoration: none;
+  background-image: linear-gradient(transparent, transparent 5px, #c9cacc 5px, #c9cacc);
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+
+.content ul, .content ol, .content dl {
+  line-height: 1.725;
+}
+
+.content h1, .content .h1 {
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #2bbc8a;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h1 a, .content .h1 a,
+.content h2 a, .content h3 a,
+.content h4 a, .content h5 a,
+.content h6 a {
+  background: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-list {
+  padding: 0;
+  list-style: none;
+}
+
+.project-list .project-item {
+  margin-bottom: 5px;
+}
+
+.max-width {
+  max-width: 48rem;
+}
+.px3 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.py1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+.my4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+#about_logo {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}

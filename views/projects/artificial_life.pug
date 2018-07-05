@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+    div(class="artificial_life__title")
+        h2 Artificial Life
+    div(class="artificial_life__content")
+        table
+            tr
+                th Entity
+                th Properties
+                th Description
+            tr
+                td Wall or Stone (#)
+                td None
+                td Other entities can't across the wall or stone
+            tr
+                td Plant (*)
+                td
+                    ul
+                        li #[strong start energy] - 3 + (0-4)
+                        li #[strong energy to reproduce] - 30
+                        li #[strong base direction] - always stays on one position
+                td Jungle or any other plants, staying only on start position
+            tr
+                td PlantEater (O)
+                td
+                    ul
+                        li #[strong start energy] - 30
+                        li #[strong energy to reproduce] - 90
+                        li #[strong base direction] - east
+                td Animals which eat plants
+            tr
+                td MeatEater (@)
+                td
+                    ul
+                        li #[strong start energy] - 100
+                        li #[strong energy to reproduce] - 400
+                        li #[strong base direction] - west
+                td Danger animals like a tiger, try to find and eat PlantEater
+        div(class="artificial_life__demo")
+            div(class="artificial_life__box" id="output")
+            div(class="artificial_life__button" id="artificial_life_button") start
+    script(type="module" src="/javascript/projects/artificial_life/artificial_life.js")
