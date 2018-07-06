@@ -9,3 +9,9 @@ function closeNav() {
     document.getElementsByClassName("content")[0].style.marginLeft= "0";
     document.body.style.backgroundColor = "white";
 }
+
+(function(){
+    document.querySelector('#header > #nav > ul > .icon').addEventListener('click', function(){
+        document.querySelector('#header > #nav > ul').classList.toggle('responsive');
+    });
+})();
